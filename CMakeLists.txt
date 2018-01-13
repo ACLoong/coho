@@ -5,4 +5,6 @@ set(CMAKE_CXX_STANDARD 11)
 
 set(SOURCE_FILES src/main.cpp)
 
+include_directories(src/comps/args)
+
 add_executable(yuandao ${SOURCE_FILES})
