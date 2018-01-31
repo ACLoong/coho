@@ -8,3 +8,17 @@
     
 ## 二、 拓扑结构  
     
+    
+## 三、 服务端命令
+yd  [-command]
+
+command list  
+    -start      启动yuandao服务器  
+    -restart    重启yuandao服务器  
+    -reload     重新加载yuandao配置文件  
+    -stop       安全停止yuandao服务器  
+    
+## 四、 客户端命令
+yd [-command] [-options]  
+
+command list  
