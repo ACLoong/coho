@@ -17,6 +17,7 @@ namespace yd {
         Args() {}
 
         void addCommandHandler(const std::string &command, const std::function<void ()> &handler);
+        void addErrorHandler(const std::function<void (const std::string &err)> &handler);
         void parseAndRun(int argc, char **argv);
 
     private:
@@ -24,6 +25,7 @@ namespace yd {
         char                                            **_argv;
 
         std::map<std::string, std::function<void ()>>   _handlers;
+        std::function<void (const std::string &err)>    _errorHandler;
     };
 
 }

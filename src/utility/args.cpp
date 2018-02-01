@@ -11,6 +11,28 @@ namespace yd {
     }
 
     void Args::parseAndRun(int argc, char **argv) {
-        //TODO
+        if (argc <= 1) {
+
+            if (nullptr != _errorHandler) {
+                _errorHandler("Count of command arguments is too few.");
+            }
+        }
+
+        if (argc > 2) {
+            if (nullptr != _errorHandler) {
+                _errorHandler("Count of command arguments is too many.");
+            }
+        }
+
+        auto &func = _handlers.at(std::string(argv[1]));
+        if (nullptr != func) {
+            func();
+        }
+    }
+
+    void Args::addErrorHandler(const std::function<void(const std::string &err) > &handler) {
+        _errorHandler = handler;
     }
 }
+
+
