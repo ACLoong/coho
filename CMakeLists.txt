@@ -3,8 +3,8 @@ project(yuandao)
 
 set(CMAKE_CXX_STANDARD 11)
 
-set(SOURCE_FILES src/main.cpp src/utility/args.cpp src/utility/args.h)
+set(SOURCE_FILES src/submitter/main.cc)
 
-include_directories(src/comps/args)
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY bin)
 
 add_executable(yuandao ${SOURCE_FILES})

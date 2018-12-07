@@ -33,4 +33,6 @@
 
 # idea
 *.idea
-cmake-build-debug
+
+# build
+build
