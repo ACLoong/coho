@@ -2,9 +2,12 @@ cmake_minimum_required(VERSION 3.8)
 project(yuandao)
 
 set(CMAKE_CXX_STANDARD 11)
+set(CMAKE_RUNTIME_OUTPUT_DIRECTORY bin)
 
-set(SOURCE_FILES src/main.cpp src/utility/args.cpp src/utility/args.h)
+set(SUBMITTER_FILES src/submitter/main.cc)
+set(GLOBAL_PROCESSER_FILES src/global_processer/main.cc)
+set(WORKER_FILES src/worker/main.cc)
 
-include_directories(src/comps/args)
-
-add_executable(yuandao ${SOURCE_FILES})
+add_executable(submitter ${SUBMITTER_FILES})
+add_executable(global_processer ${GLOBAL_PROCESSER_FILES})
+add_executable(worker ${WORKER_FILES})
