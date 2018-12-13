@@ -5,7 +5,7 @@ set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_RUNTIME_OUTPUT_DIRECTORY bin)
 
 set(SUBMITTER_FILES src/submitter/main.cc)
-set(GLOBAL_PROCESSER_FILES src/global_processer/main.cc)
+set(GLOBAL_PROCESSER_FILES src/global_processor/main.cc)
 set(WORKER_FILES src/worker/main.cc)
 
 include_directories(build/thirdparty/handy/include)
