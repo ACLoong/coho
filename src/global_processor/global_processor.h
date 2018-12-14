@@ -11,7 +11,7 @@ public:
 
 private:
     handy::EventBases *event_base_;
-
+    //WorkerPool worker_pool_;
 };
 
 } // namespace coho
